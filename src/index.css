@@ -1,0 +1,220 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+/*Navbar styles*/
+.navbar{
+  padding: 2% 8%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  background-color: aliceblue;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+.logo a h1{
+  color: black;
+}
+.logo a{
+  text-decoration: none;
+}
+.navbar-links{
+  display: flex;
+}
+.navbar-links ul li{
+  list-style: none;
+  display: inline;
+  margin-right: 10px;
+}
+.navbar-links ul li a{
+  text-decoration: none;
+  color: grey;
+  font-weight: 800;
+  font-size: 20px;
+}
+.navbar-links a{
+  font-size: 30px;
+  color: rgb(43, 40, 40);
+  margin-right: 10px;
+}
+.navbar-links a:hover{
+  color: black;
+}
+.navbar-links .menu-collapse-icon{
+  display: none;
+}
+
+/*home section styles*/
+.home-section-btn{
+  padding: 20px 30px;
+  margin: 10px;
+  border: none;
+  font-size: 20px;
+}
+.home-section-btn:hover{
+  background-color: rgb(0, 162, 255);
+}
+#home h1{
+  color: rgb(112, 161, 189);
+  font-size: 6rem;
+}
+
+/*About-us section*/
+.about-section{
+  display: flex;
+  justify-content: space-between;
+}
+.about-section div{
+  margin-right: 10px;
+}
+.about-section img{
+  width: 500px;
+  height: 500px;
+}
+/*why choose us*/
+.authority{
+  display:flex;
+  justify-content: space-between;
+}
+.authority-col{
+  width: 50%;
+  margin: 20px;
+  line-height: 1.5;
+}
+/*SHOP-NOW*/
+.shop-now{
+  display: flex;
+  justify-content: space-between;
+}
+/*Mission*/
+.mission-section{
+  display: flex;
+  justify-content: space-between;
+}
+/*Reviews*/
+.card-container{
+  display: flex;
+  justify-content: center;
+}
+.card{
+  background-color: aliceblue;
+  border: 1px solid grey;
+  width: 300px;
+  margin: 20px;
+  text-align: start;
+  padding: 2%;
+}
+
+
+/*CTA*/
+.CTA-home{
+  margin: auto 0;
+  text-align: center;
+}
+.CTA-home h1{
+  color:aliceblue;
+  font-size: 4rem;
+}
+.CTA-home p{
+  font-size: 18px;
+  color: rgb(5, 140, 236);
+  font-weight: bold;
+}
+.CTA-btn{
+  padding:15px 30px;
+  border:none;
+  margin-right:20px;
+}
+.CTA-btn:hover{
+  background-color: rgb(175, 199, 223);
+}
+
+
+/*FOOTER*/
+.footer{
+  padding: 0 8%;
+}
+.offerings{
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+.offerings p{
+  color: rgb(19, 160, 94);
+  font-size: 25px;
+  margin: 0 50px;
+}
+.offerings p span{
+  color: black;
+  margin-left: 8px;
+}
+.footer-row{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;/*
+  flex-wrap: wrap;*/
+}
+.footer-col{
+  width: 25%;
+  padding: 20px 30px;/*
+  margin: 10px;*/
+}
+.footer-col h3{
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+.footer-col p{
+  color: grey;
+  font-size: 19px;
+}
+.footer-col ul li{
+  list-style: none;
+}
+.footer-col ul li a{
+  text-decoration: none;
+  color: grey;
+  font-size: 19px;
+}
+.footer-col ul li a:hover{
+  font-weight: 900;
+  color: black;
+}
+.social-icons{
+  margin: 15px 0;
+}
+.social-icons a{
+  color: rgb(26, 24, 24);
+  font-size: 19px;
+  margin: 10px 5px;
+}
+.social-icons a:hover{
+  color: rgb(107, 173, 173);
+}
+
+/*Making the componets Responsive*/
+@media (max-width:600px) {
+  .navbar-links ul li{
+    display: none;
+  }
+  .navbar-links .menu-collapse-icon{
+    display: block;
+  }
+  .offerings{
+    flex-direction: column;
+  }
+  .footer-row{
+    flex-direction: column;
+  }
+  .footer-col{
+    width: 100%;
+  }
+}
