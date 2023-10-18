@@ -24,7 +24,6 @@ const Footer = () => {
                         <a href="#"><FaFacebook /></a>
                         <a href="#"><FaTwitter /></a>
                     </div>
-
                 </div>
                 <div className="footer-col">
                     <h3>Shop</h3>
@@ -51,13 +50,8 @@ const Footer = () => {
                         <li><a href="">Cart</a></li>
                         <li><a href="">Checkout</a></li>
                     </ul>
-
                 </div>
-
             </div>
-
-
-
         </div>
      );
 }

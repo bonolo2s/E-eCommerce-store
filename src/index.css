@@ -53,7 +53,7 @@ body{
   display: none;
 }
 
-/*home section styles*/
+/*HOME SECTION*/
 .home-section-btn{
   padding: 20px 30px;
   margin: 10px;
@@ -77,8 +77,11 @@ body{
   margin-right: 10px;
 }
 .about-section img{
-  width: 500px;
-  height: 500px;
+  width: 25rem;
+  height: 25rem;
+}
+.about-section h2{
+  font-size: 2.5rem;
 }
 /*why choose us*/
 .authority{
@@ -91,9 +94,18 @@ body{
   line-height: 1.5;
 }
 /*SHOP-NOW*/
-.shop-now{
+.shop-now-section{
   display: flex;
   justify-content: space-between;
+}
+.display{
+  display: flex;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 75vh;
+  height: 35rem;
 }
 /*Mission*/
 .mission-section{
@@ -116,6 +128,16 @@ body{
 
 
 /*CTA*/
+.CTA{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 50vh;
+  padding: 0 8%;
+  display: flex;
+  justify-content: center;
+}
 .CTA-home{
   margin: auto 0;
   text-align: center;
@@ -202,19 +224,109 @@ body{
 
 /*Making the componets Responsive*/
 @media (max-width:600px) {
+  /*NAVBAR*/
+  .navbar{
+    padding: 2%;
+    left: 0;
+  }
   .navbar-links ul li{
     display: none;
   }
   .navbar-links .menu-collapse-icon{
     display: block;
   }
+  /*HOME SECTION*/
+  #home h1{
+    color: rgb(112, 161, 189);
+    font-size: 4rem;
+  }
+  /*ABOUT_SECTION*/
+  .about-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .about-section img{
+    width: 100%;
+    height: 25rem;
+  }
+  .about-section h2{
+    font-size: 2rem;
+  }
+
   .offerings{
     flex-direction: column;
   }
+  /*why choose us*/
+  .authority{
+    flex-direction: column;
+  }
+  .authority-col{
+    width: 100%;
+    margin: 10px;
+    line-height: 1.5;
+  }
+  /*SHOP-NOW*/
+  .shop-now-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .display{
+    display: flex;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 25rem;
+    margin: 10px;
+  }
+
+  /*Mission*/
+  .mission-section{
+    flex-direction: column;
+  }
+  /*Reviews*/
+  .card-container{
+    flex-direction: column;
+  }
+  /*CTA*/
+  .CTA{
+    height: 120vh;
+  }
+  /*FOOTER*/
   .footer-row{
     flex-direction: column;
   }
   .footer-col{
-    width: 100%;
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) {
+    /*About-us section*/
+    .about-section img{
+      width: 20rem;
+      height: 25rem;
+    }
+    /*SHOP-NOW*/
+    .shop-now-section{
+      flex-direction: row;
+    }
+    .display{
+      margin: 10px;
+    }
+}
+
+@media (min-width: 1200px) {
+  /*About-us section*/
+  .about-section img{
+    width: 30rem;
+    height: 25rem;
+  }
+  /*SHOP-NOW*/
+  .shop-now-section{
+    flex-direction: row;
   }
 }

@@ -2,16 +2,8 @@ import homeImg from "../assets/unleash-section.jpg"
 
 const Cta = () => {
     return (  
-        <div style={{
+        <div className="CTA" style={{
             backgroundImage: `url(${homeImg})`,
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            backgroundAttachment: 'fixed',
-            backgroundSize: 'cover',
-            height: '50vh',
-            padding: '0 8%',
-            display:'flex',
-            justifyContent:'center'
         }}>
         <div className="CTA-home">
         <h1>Unleash Your Inner Athlete</h1>

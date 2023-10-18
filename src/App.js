@@ -43,13 +43,13 @@ function App() {
       <div style={{backgroundColor:'aliceblue',padding:'3% 8%'}}>
         <div className="about-section">
           <div>
-            <img src={aboutImg} alt="About-Img" />
+            <img src={aboutImg} alt="About-Img"/>
           </div>
           <div style={{display:'flex', flexDirection: 'column', justifyContent:'center',marginLeft:'50px'}}>
             <h1 style={{marginBottom:'20px',color:'blue', fontWeight:'bold'}}>ABOUT US</h1>
             <br />
-            <h2 style={{fontSize:'2.5rem'}}>Gear up with</h2>
-            <h2 style={{fontSize:'2.5rem'}}>ACtiveWearCentral</h2>
+            <h2 >Gear up with</h2>
+            <h2 >ACtiveWearCentral</h2>
             <br />
             <p style={{marginTop: '20px', lineHeight:'1.5',fontSize:'20px',color:'grey'}}>Welcome to ActiveWearCentral, the ultimate destination for sportswear enthusiasts.
               We are passionate about movement and strive to bring you the latest and greatest 
@@ -113,41 +113,23 @@ function App() {
         </div>
       </div>
 
-      <div className="shop-now" style={{padding:'8%'}}>
-        <div >
-          <div style={{
-            display:'flex',
-            justifyContent:'center',
-            backgroundImage: `url(${shoeSale})`,
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            width:'75vh',
-            height:'35rem'}}>
+      <div className="shop-now-section" style={{padding:'8%'}}>
+        <div className="display" style={{
+            backgroundImage: `url(${shoeSale})`,}}>
               <div style={{margin:'auto',textAlign:'center'}} >
                 <p style={{fontSize:"30px", color:"aliceblue",fontWeight:'bold'}}>Shoes</p>
                 <button style={{padding:'15px 30px', fontSize:'15px', marginTop:'20px'}}>Shoes</button>
               </div>
-          </div>
         </div>
-
-        <div>
-          <div style={{
-            display:'flex',
-            justifyContent:'center',
-            backgroundImage: `url(${fitnessSale})`,
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            width:'75vh',
-            height:'35rem'}}>
+        <div className="display" style={{
+            backgroundImage: `url(${fitnessSale})`}}>
               <div style={{margin:'auto',textAlign:'center'}} >
                 <p style={{fontSize:"30px", color:"aliceblue",fontWeight:'bold'}}>Fitness apparel</p>
                 <button style={{padding:'15px 30px', fontSize:'15px', marginTop:'20px'}}>Fitness apparel</button>
               </div>
           </div>
         </div>
-      </div>
+
 
       <div style={{padding:'0 8%'}}>
         <div style={{display:'flex',justifyContent:'space-between'}}>
