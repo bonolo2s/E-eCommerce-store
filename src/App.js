@@ -62,7 +62,7 @@ function App() {
         </div>
 
         <div style={{textAlign:'center',margin:'50px 0'}}>
-          <h3 style={{fontSize:'2.5rem',margin:'20px 0'}}>Why Choose ActiveWearCentral</h3>
+          <h3 style={{fontSize:'2rem',margin:'20px 0'}}>Why Choose ActiveWearCentral</h3>
           <p style={{color:'grey',fontSize:'20px'}}>At ActiveWearCentral, we believe in quality, style, and affordability.
             Our collection features top-of-the-line sportswear that meets your unique 
             needs and preferences. Whether you’re a seasoned athlete or a beginner, 

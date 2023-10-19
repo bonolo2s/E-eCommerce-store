@@ -10,16 +10,20 @@ body{
   font-family: 'Roboto', sans-serif;
   position: relative;
 }
-/*Navbar styles*/
+/*Navbar STYLES*/
 .navbar{
-  padding: 2% 8%;
+  padding: 2% 8%;/*
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;*/
   position: fixed;
   background-color: aliceblue;
   left: 0;
   top: 0;
   right: 0;
+}
+.navbar-container{
+  display: flex;
+  justify-content: space-between;
 }
 .logo a h1{
   color: black;
@@ -28,6 +32,36 @@ body{
   text-decoration: none;
 }
 .navbar-links{
+  display: flex;
+}
+.hidden-navbar-links{
+  display: none;
+  text-align: center;
+}
+.hidden-navbar-links ul li{
+  list-style: none;
+}
+.hidden-navbar-links ul li a{
+  text-decoration: none;
+  color: grey;
+  font-weight: 800;
+  font-size: 20px;
+}
+.dropdown{
+  position: relative;
+}
+.dropdown-child{
+  position: absolute;
+  left: 0;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: azure;
+  border-radius: 5px;
+  padding: 10px;
+  display: none;
+}
+.dropdown:hover>.dropdown-child{
   display: flex;
 }
 .navbar-links ul li{
@@ -100,6 +134,7 @@ body{
 }
 .display{
   display: flex;
+
   justify-content: center;
   background-position: center;
   background-repeat: no-repeat;
@@ -222,7 +257,7 @@ body{
   color: rgb(107, 173, 173);
 }
 
-/*Making the componets Responsive*/
+/*Making the Components Responsive*/
 @media (max-width:600px) {
   /*NAVBAR*/
   .navbar{
@@ -235,6 +270,18 @@ body{
   .navbar-links .menu-collapse-icon{
     display: block;
   }
+  .hidden-navbar-links{
+    display: block;
+  }
+  .hidden-dropdown-child{
+    display: flex;
+    flex-direction: column;
+    background-color: azure;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+
   /*HOME SECTION*/
   #home h1{
     color: rgb(112, 161, 189);
