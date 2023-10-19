@@ -1,45 +1,47 @@
 import { IoIosCart } from 'react-icons/io';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
+import { Link } from 'react-router-dom'
+
 const Navbar = () => {
     return ( 
         <div className="navbar">
             <div className="navbar-container">
                 <div className="logo">
-                    <a href="#">
+                    <Link to='/' >
                         <h1>ACTIVE WEAR CENTRAL</h1>
-                    </a>
+                    </Link>
                 </div>
                 <div className='navbar-links'>
                     <ul>
-                        <li><a href="">Sale</a></li>
-                        <li className='dropdown' ><a href="">Shop</a>
+                        <li><Link to='Sale' >Sale</Link></li>
+                        <li className='dropdown' ><Link to='All'>Shop</Link>
                         <ul className='dropdown-child' >
-                            <li><a href="">•Fitness apparel</a></li>
-                            <li><a href="">•Shoes</a></li>
-                            <li><a href="">•Sports equipment</a></li>
-                            <li><a href="">•all</a></li>
+                            <li><Link to='Fitness'>•Fitness apparel</Link></li>
+                            <li><Link to='Shoes'>•Shoes</Link></li>
+                            <li><Link to='Equipment'>•Sports equipment</Link></li>
+                            <li><Link to='Sale'>•View all Products</Link></li>
                         </ul>
                         </li>
-                        <li><a href="">Contact</a></li>
+                        <li><Link to='Sale'>Contact</Link></li>
                     </ul>
-                    <a href="#"><IoIosCart /></a>
-                    <a href="#" className="menu-collapse-icon"><GiHamburgerMenu /></a>
+                    < Link to='Sale'><IoIosCart /></Link>
+                    <Link to='Sale' className="menu-collapse-icon"><GiHamburgerMenu /></Link>
                 </div>
             </div>
             <div className='hidden-navbar-links' style={{width:'100%'}}>
                 <br />
                 <ul>
-                    <li><a href="">Sale</a></li>
-                    <li><a href="" className='hidden-dropdown'>Shop</a>
+                    <li><Link to='Sale'>Sale</Link></li>
+                    <li><Link to='Sale' className='hidden-dropdown'>Shop</Link>
                         <ul className='hidden-dropdown-child' >
-                            <li><a href="">•Fitness apparel</a></li>
-                            <li><a href="">•Shoes</a></li>
-                            <li><a href="">•Sports equipment</a></li>
-                            <li><a href="">•all</a></li>
+                            <li><Link to='Sale'>•Fitness apparel</Link></li>
+                            <li><Link to='Sale'>•Shoes</Link></li>
+                            <li><Link to='Sale'>•Sports equipment</Link></li>
+                            <li><Link to='Sale'>• View all Products</Link></li>
                         </ul>
                     </li>
-                    <li><a href="">Contact</a></li>
+                    <li><Link to='Sale'>Contact</Link></li>
                 </ul>
             </div>
         </div>
