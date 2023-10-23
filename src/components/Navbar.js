@@ -20,13 +20,13 @@ const Navbar = () => {
                             <li><Link to='Fitness'>•Fitness apparel</Link></li>
                             <li><Link to='Shoes'>•Shoes</Link></li>
                             <li><Link to='Equipment'>•Sports equipment</Link></li>
-                            <li><Link to='Sale'>•View all Products</Link></li>
+                            <li><Link to='All'>•View all Products</Link></li>
                         </ul>
                         </li>
-                        <li><Link to='Sale'>Contact</Link></li>
+                        <li><Link to='Contact'>Contact</Link></li>
                     </ul>
-                    < Link to='Sale'><IoIosCart /></Link>
-                    <Link to='Sale' className="menu-collapse-icon"><GiHamburgerMenu /></Link>
+                    < Link to='#'><IoIosCart /></Link>
+                    <Link to='#' className="menu-collapse-icon"><GiHamburgerMenu /></Link>
                 </div>
             </div>
             <div className='hidden-navbar-links' style={{width:'100%'}}>
@@ -35,13 +35,13 @@ const Navbar = () => {
                     <li><Link to='Sale'>Sale</Link></li>
                     <li><Link to='Sale' className='hidden-dropdown'>Shop</Link>
                         <ul className='hidden-dropdown-child' >
-                            <li><Link to='Sale'>•Fitness apparel</Link></li>
-                            <li><Link to='Sale'>•Shoes</Link></li>
-                            <li><Link to='Sale'>•Sports equipment</Link></li>
-                            <li><Link to='Sale'>• View all Products</Link></li>
+                            <li><Link to='Fitness'>•Fitness apparel</Link></li>
+                            <li><Link to='Shoes'>•Shoes</Link></li>
+                            <li><Link to='Equipment'>•Sports equipment</Link></li>
+                            <li><Link to='All'>• View all Products</Link></li>
                         </ul>
                     </li>
-                    <li><Link to='Sale'>Contact</Link></li>
+                    <li><Link to='Contact'>Contact</Link></li>
                 </ul>
             </div>
         </div>

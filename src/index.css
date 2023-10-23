@@ -110,9 +110,9 @@ body{
 .about-section div{
   margin-right: 10px;
 }
-.about-section img{
+.abt-img{
   width: 25rem;
-  height: 25rem;
+  height: 20rem;
 }
 .about-section h2{
   font-size: 2.5rem;
@@ -194,6 +194,7 @@ body{
 .CTA-btn:hover{
   background-color: rgb(175, 199, 223);
 }
+/*PRODUCTS DISPLAY STYLE*/
 
 
 /*FOOTER*/
@@ -295,7 +296,7 @@ body{
   }
   .about-section img{
     width: 100%;
-    height: 25rem;
+    height: 15rem;
   }
   .about-section h2{
     font-size: 2rem;
@@ -355,7 +356,7 @@ body{
     /*About-us section*/
     .about-section img{
       width: 20rem;
-      height: 25rem;
+      height: 18rem;
     }
     /*SHOP-NOW*/
     .shop-now-section{
@@ -370,7 +371,7 @@ body{
   /*About-us section*/
   .about-section img{
     width: 30rem;
-    height: 25rem;
+    height: 22rem;
   }
   /*SHOP-NOW*/
   .shop-now-section{

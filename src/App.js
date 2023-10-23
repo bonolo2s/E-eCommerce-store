@@ -1,7 +1,7 @@
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import homeBg from "./assets/home1.webp";
-import aboutImg from "./assets/about-us.jpg";
+import gearUp from "./assets/gearUp.jpeg"
 import missionImg from "./assets/mission.webp";
 import julia from "./assets/julia.webp";
 import luis from "./assets/luis.webp";
@@ -52,7 +52,7 @@ function App() {
           <div style={{backgroundColor:'aliceblue',padding:'3% 8%'}}>
             <div className="about-section">
               <div>
-                <img src={aboutImg} alt="About-Img"/>
+                <img className="" src={gearUp} alt="About-Img"/>
               </div>
               <div style={{display:'flex', flexDirection: 'column', justifyContent:'center',marginLeft:'50px'}}>
                 <h1 style={{marginBottom:'20px',color:'blue', fontWeight:'bold'}}>ABOUT US</h1>
@@ -127,14 +127,14 @@ function App() {
                 backgroundImage: `url(${shoeSale})`,}}>
                   <div style={{margin:'auto',textAlign:'center'}} >
                     <p style={{fontSize:"30px", color:"aliceblue",fontWeight:'bold'}}>Shoes</p>
-                    <button style={{padding:'15px 30px', fontSize:'15px', marginTop:'20px'}}>Shoes</button>
+                    <Link to='Shoes'><button style={{padding:'15px 30px', fontSize:'15px', marginTop:'20px'}}>Shoes</button></Link>
                   </div>
             </div>
             <div className="display" style={{
                 backgroundImage: `url(${fitnessSale})`}}>
                   <div style={{margin:'auto',textAlign:'center'}} >
                     <p style={{fontSize:"30px", color:"aliceblue",fontWeight:'bold'}}>Fitness apparel</p>
-                    <button style={{padding:'15px 30px', fontSize:'15px', marginTop:'20px'}}>Fitness apparel</button>
+                    <Link to='Fitness'><button style={{padding:'15px 30px', fontSize:'15px', marginTop:'20px'}}>Fitness apparel</button></Link>
                   </div>
               </div>
             </div>
@@ -143,7 +143,7 @@ function App() {
           <div style={{padding:'0 8%'}}>
             <div style={{display:'flex',justifyContent:'space-between'}}>
               <p style={{fontSize:'25px',fontWeight:'500'}}>New Arrivals</p>
-              <p ><a href="#" style={{fontSize:'20px', fontWeight:'bold'}}>VIEW ALL NEW ARRIVALS</a></p>
+              <p ><Link to='Shoes' style={{fontSize:'20px', fontWeight:'bold'}}>VIEW ALL NEW ARRIVALS</Link></p>
             </div>
             <div>
               <p>Images coming soon</p>
