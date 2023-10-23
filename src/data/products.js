@@ -59,7 +59,7 @@ export const products = [
       description: 'Classic Air Jordans with a retro design.',
       price: 135.99,
       salePrice: 108.99,
-      categories: ['shoes', 'On Sale'],
+      categories: 'Shoes',
       image:retroJordan
     },
     {
@@ -118,7 +118,7 @@ export const products = [
        description:'Flexible and comfortable yoga pants for fitness enthusiasts.',
        price :40.99,
        salePrice: 32.99,
-       categories: ['Sport Equipment', 'On Sale'],
+       categories: 'Fitness Apparel',
        image: yogaPants
      }
   ];

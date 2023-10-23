@@ -14,7 +14,7 @@ const Equipment = () => {
                 <h1 style={{fontSize:'5rem',color:'black'}}>Sports equipment</h1>
 
                 {/* Map over the products array and display each product */}
-                <div style={{display:'flex', flexWrap:'wrap',justifyContent:'center'}}>
+                <div className="Rendering-products">
                 {equipment.map((product) => (
                         <div key={product.id} style={{margin: '10px'}}>
                             <div style={{width:'300px'}}>

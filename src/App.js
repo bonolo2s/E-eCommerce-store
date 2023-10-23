@@ -17,6 +17,7 @@ import Shoes from "./components/Shoes";
 import Contact from "./components/Contact";
 import Sale from "./components/Sale";
 import Fitness from "./components/fitness";
+import Preview from "./components/Preview";
 
 
 
@@ -234,6 +235,9 @@ function App() {
          </Route>
          <Route exact path='/All' >
           <AllProducts />
+         </Route>
+         <Route exact path='/Preview/:id' >
+          <Preview/>
          </Route>
       </Switch>
     </div>
