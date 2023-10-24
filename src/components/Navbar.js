@@ -1,11 +1,18 @@
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
+
+
 import { IoIosCart } from 'react-icons/io';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
-import { Link } from 'react-router-dom'
+
 
 const Navbar = () => {
+
+    const [menuOpen, setMenuOpen] = useState(false);
+
     return ( 
-        <div className="navbar">
+        <div className="navbar"> 
             <div className="navbar-container">
                 <div className="logo">
                     <Link to='/' >
@@ -26,14 +33,15 @@ const Navbar = () => {
                         <li><Link to='Contact'>Contact</Link></li>
                     </ul>
                     < Link to='#'><IoIosCart /></Link>
-                    <Link to='#' className="menu-collapse-icon"><GiHamburgerMenu /></Link>
+                    <GiHamburgerMenu className='menu-collapse-icon'  onClick={() =>
+                    setMenuOpen(!menuOpen)} />
                 </div>
             </div>
-            <div className='hidden-navbar-links' style={{width:'100%'}}>
+            <div className='Hidden-navbar-links' style={{width:'100%'}}>
                 <br />
-                <ul>
+                <ul className={menuOpen ? "open" : ""} >
                     <li><Link to='Sale'>Sale</Link></li>
-                    <li><Link to='Sale' className='hidden-dropdown'>Shop</Link>
+                    <li><Link to='All' className='hidden-dropdown'>Shop</Link>
                         <ul className='hidden-dropdown-child' >
                             <li><Link to='Fitness'>•Fitness apparel</Link></li>
                             <li><Link to='Shoes'>•Shoes</Link></li>

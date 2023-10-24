@@ -11,6 +11,9 @@ body{
   position: relative;
 }
 /*Navbar STYLES*/
+.active{
+  background-color: rgb(11, 127, 180);
+}
 .navbar{
   padding: 2% 8%;/*
   display: flex;
@@ -83,9 +86,15 @@ body{
 .navbar-links a:hover{
   color: black;
 }
-.navbar-links .menu-collapse-icon{
+.menu-collapse-icon{
+  display: none;
+  font-size: 30px;
+}
+.Hidden-navbar-links ul{
   display: none;
 }
+
+
 
 /*HOME SECTION*/
 .home-section-btn{
@@ -160,7 +169,68 @@ body{
   text-align: start;
   padding: 2%;
 }
+/*CONTACT*/
+.page-title{
+  text-align: center;
+}
+.page-title h1{
+  font-size: 8rem;
+  margin: 25px 0;
+}
+.Contact-sec-container{
+  margin: 3%;
+  background-color: aliceblue;
+}
+.Contact-form-sec{
+  display: flex;
+  justify-content: space-between;
+}
+.info-section{
+  width: 50%;
+  margin: 10px;
+ }
+ .input-section{
+   width: 100%;
+   margin: 10px;
+}
+.input-section button{
+  padding: 20px 30px;
+  margin: 20px 0;
+  font-size: 15px;
+  font-weight: 550;
+  border-radius: 5px;
+  border: none;
+  background-color: black;
+  color: white;
+  transition: 0.5s all ease;
+}
+.input-section button:hover{
+  background-color: blue;
+}
 
+/*FAQs*/
+.FAQ{
+  margin: 8% 5%;/*
+  background-color: beige;*/
+}
+.FAQ h2{
+  margin: 20px 0;
+}
+.accordion-container{
+  border: 1px solid black;
+}
+.content-title{
+  border-bottom: 1px solid black;
+  padding: 20px;
+}
+.content-text{
+  border-bottom: 1px solid black;
+  padding: 20px;
+  display: none;
+}
+.content-text.open{
+  display: block;
+}
 
 /*CTA*/
 .CTA{
@@ -266,17 +336,29 @@ body{
 @media (max-width:600px) {
   /*NAVBAR*/
   .navbar{
-    padding: 2%;
+    padding: 4%;
     left: 0;
   }
   .navbar-links ul li{
     display: none;
   }
-  .navbar-links .menu-collapse-icon{
+  .menu-collapse-icon{
     display: block;
   }
-  .hidden-navbar-links{
-    display: block;
+  .Hidden-navbar-links ul.open{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .Hidden-navbar-links ul li{
+    margin: 1rem auto;
+    list-style: none;
+  }
+  .Hidden-navbar-links ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: grey ;
   }
   .hidden-dropdown-child{
     display: flex;
@@ -285,7 +367,6 @@ body{
     border-radius: 5px;
     padding: 10px;
   }
-
 
   /*HOME SECTION*/
   #home h1{
@@ -347,6 +428,25 @@ body{
   .CTA{
     height: 120vh;
   }
+  /*CONTACT*/
+  .page-title h1{ 
+    font-size: 5rem;
+  }
+  .Contact-sec-container{
+    margin: 0;
+  }
+  .Contact-form-sec{
+    flex-direction: column;
+    padding: 5%;
+  }
+  .info-section{
+   width: 100%;
+   margin: 10px;
+  }
+  .input-section{
+    width: 100%;
+    margin: 10px;
+   }
   /*PRODUCTS DISPLAY STYLE*/
   .Rendering-products{
     grid-template-columns: repeat(1,100%);
@@ -358,6 +458,17 @@ body{
   .footer-col{
     width: 90%;
   }
+}
+
+/*FAQS*/
+.FAQ{
+  padding: 0 8%;
+}
+.FAQ h2{
+  font-size: 3rem;
+}
+.FAQ p{
+  font-size: 20px;
 }
 
 @media (min-width: 768px) {

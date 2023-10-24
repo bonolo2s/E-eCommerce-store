@@ -22,7 +22,7 @@ const AllProducts = () => {
                 <div className="Rendering-products">
                 {products.map((product) => (
                         <div key={product.id} style={{margin: '10px'}}>
-                            <Link to={{
+                            <Link style={{color: 'black'}} to={{
                                 pathname: `/Preview/${product.id}`,
                                 state: { product: product }                    
                             }}>

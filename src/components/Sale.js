@@ -11,7 +11,7 @@ const Sale = () => {
             <Cta/>
             <div style={{backgroundColor:'aliceblue',padding:'3% 8%'}}>
             <div style={{backgroundColor:'white', width:'100%',padding:'3%'}} >
-                <h1 style={{fontSize:'5rem',color:'black'}}>Sports equipment</h1>
+                <h1 style={{fontSize:'5rem',color:'black'}}>Sale</h1>
 
                 {/* Map over the products array and display each product */}
                 <div style={{display:'flex', flexWrap:'wrap',justifyContent:'center'}}>
