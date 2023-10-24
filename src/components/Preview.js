@@ -1,51 +1,52 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Cta from './CTA';
+import paymentMethod from '../assets/Credit-Card.webp'
+import { products } from "../data/products";
 
 const Preview = () => {
-    const location = useLocation();
-    const product = location.state.product;
+    const { id } = useParams(); // Get the product id from the URL
+    const numericId = Number(id);
+
+    const product = products.find(prod => prod.id === numericId); // Find the product with the matching id
 
     // Check if product is not null
-    if (product) {
-        return (
-            <div>
-                <Navbar/>
-                <div style={{backgroundColor:'aliceblue',padding:'3% 8%'}}>
-                    <div style={{backgroundColor:'white', width:'100%',padding:'3%'}} >
+    if (!product) {
+        return <div>Product not found.</div>;
+    }
+
+    return (
+        <div>
+            <Navbar/>
+            <div style={{backgroundColor:'aliceblue',padding:'3% 8%'}}>
+                <div className='preview'>
+                    <div className='preview-sec1'>
+                        <img src={product.image} alt={product.name} style={{width:'100%', height:"auto"}} />
+                    </div>
+                    <div className='preview-sec2' >
+                        <p style={{fontSize:'20px', color:'grey'}} >Category: {product.categories}</p>
+                        <h1>{product.name}</h1>
+                        <p style={{fontSize:'40px', color:'grey'}} >Price: ${product.price}</p>
+                        <p style={{fontSize:'20px', color:'grey'}} >Description: {product.description}</p>
                         <div>
-                            <div style={{display:'flex'}}>
-                                <div style={{padding:'3%',}} >
-                                    <img src={product.image} alt={product.name} style={{width:'100%', height:"auto"}} />
-                                </div>
-                                <div style={{padding:'3%',}}>
-                                    <p style={{fontSize:'18px', fontWeight:'600',color:'grey'}}>Category: {product.categories}</p>
-                                    <h1 style={{fontSize:'2.5rem',margin:'20px 0'}}>{product.name}</h1>
-                                    <p>Price: ${product.price}</p>
-                                    <p style={{fontSize:'18px',color:'grey'}}>{product.description}</p>
-                                    <div style={{margin:'20px 0'}}>
-                                        <input type="text" />
-                                        <button style={{padding:'15px 30px',color:'aliceblue', backgroundColor:'black', border:'none'}}>Add to cart</button>
-                                    </div>
-                                    <hr />
-                                    <span style={{width:'250px',height:'2px',backgroundColor:'black'}}></span>
-                                    
-                                </div>
-                            </div>
-                            {/* Add more product details here */}
+                            <input type="number" id='quantity' name="quantity" min="1" max="5" style={{width:'100px', height:'40px'}} />
+                            <button className='add-to-cart-btn'>Add to cart</button>
                         </div>
+                        <span style={{width:'100%',height:'1px', backgroundColor:"black",display:'inline-block',margin:'20px 0'}}></span>
+                        <p>Category :{product.categories}</p>
+                        <div style={{border:'1px solid black', padding:'5%',textAlign:'center',margin:'10px 0'}} >
+                            <img src={paymentMethod} alt='supported payment methods' style={{maxWidth:'100%',height:'auto'}} />
+                        </div>
+
                     </div>
                 </div>
-                <Cta/>
-                <Footer/>
             </div>
-        );
-    } else {
-        // If no product is selected, don't render anything
-        return null;
-    }
+            <Cta/>
+            <Footer/>
+        </div>
+    );
 }
 
 export default Preview;

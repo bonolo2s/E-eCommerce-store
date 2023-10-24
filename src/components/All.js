@@ -8,7 +8,7 @@ import Preview from "./Preview"; // import your Preview component
 
 
 const AllProducts = () => {
-    const [selectedProduct, setSelectedProduct] = useState(null); // Add a state variable for the selected product
+ 
     return (
        
     <div>
@@ -22,10 +22,7 @@ const AllProducts = () => {
                 <div className="Rendering-products">
                 {products.map((product) => (
                         <div key={product.id} style={{margin: '10px'}}>
-                            <Link style={{color: 'black'}} to={{
-                                pathname: `/Preview/${product.id}`,
-                                state: { product: product }                    
-                            }}>
+                            <Link style={{color: 'black'}} to={`/Preview/${product.id}`}>
                                 <div style={{width:'300px'}}>
                                     <img src={product.image} alt={product.name} style={{width:'300px', height:"300px"}} />
                                     <p style={{fontSize:'20px', color:'grey'}}>{product.category}</p>
