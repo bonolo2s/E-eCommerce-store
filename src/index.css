@@ -94,8 +94,26 @@ body{
   display: none;
 }
 
-
-
+/*OFF-CANVA STYLES*/
+.offCanva{
+  display: none;
+  background-color: rgb(181, 201, 219);
+  padding: 2% 5%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40vw;
+  height: 100%;
+}
+.item{
+  display: flex;
+  margin: 10px ;
+  align-items: center;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.item:hover{
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
 /*HOME SECTION*/
 .home-section-btn{
   padding: 20px 30px;
@@ -143,7 +161,6 @@ body{
 }
 .display{
   display: flex;
-
   justify-content: center;
   background-position: center;
   background-repeat: no-repeat;
@@ -270,6 +287,10 @@ body{
   grid-template-columns: repeat(3,30%);
   justify-content: center;
 }
+.Rendering-products a{
+  text-decoration: none;
+  color: black;
+}
 
 /*PRODUCTS ON PREVIEW*/
 .preview{
@@ -282,6 +303,10 @@ body{
 .preview-sec1{
   width: 100%;
   margin: 10px;
+}
+.preview-sec1 div{
+  width: 30rem;
+  height: 30rem;
 }
 .preview-sec2{
   width: 100%;
@@ -305,6 +330,17 @@ body{
   background-color: aliceblue;
   color: black;
 }
+
+/*SHOPPING CART STYLES*/
+.cartShopping-cart-container div {
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+.cartShopping-cart-container div.show {
+  transform: translateX(0);
+}
+
+
 
 /*FOOTER*/
 .footer{
@@ -403,6 +439,12 @@ body{
     padding: 10px;
   }
 
+  /*OFF-CANVA STYLES*/
+  .offCanva{
+    width: 93%;
+    height: 100%;
+  }
+
   /*HOME SECTION*/
   #home h1{
     color: rgb(112, 161, 189);
@@ -489,7 +531,20 @@ body{
   /*PRODUCTS ON PREVIEW*/
   .preview{
     flex-direction: column;
+    padding: 1%;
   }
+  .preview-sec1 div{
+    width: 100%;
+    height: 25rem;
+  }
+  .preview-sec1{
+    margin: 0;
+  }
+  .preview-sec2{
+    margin: 0;
+  }
+
+
 
   /*FOOTER*/
   .footer-row{
@@ -512,6 +567,12 @@ body{
 }
 
 @media (min-width: 768px) {
+    /*OFF-CANVA STYLES*/
+    .offCanva{
+      width: 60vw;
+      height: 100%;
+    }
+
     /*About-us section*/
     .about-section img{
       width: 20rem;
@@ -528,9 +589,21 @@ body{
     .Rendering-products{
       grid-template-columns: repeat(2,50%);
     }
+    /*PRODUCTS ON PREVIEW*/
+    .preview-sec1 div{
+      width: 20rem;
+      height: 25rem;
+    }
 }
 
 @media (min-width: 1200px) {
+
+  /*OFF-CANVA STYLES*/
+  .offCanva{
+    width: 40vw;
+    height: 100%;
+  }
+
   /*About-us section*/
   .about-section img{
     width: 30rem;
@@ -543,6 +616,11 @@ body{
   /*PRODUCTS DISPLAY STYLE*/
   .Rendering-products{
     grid-template-columns: repeat(3,30%);
+  }
+  /*PRODUCTS ON PREVIEW*/
+  .preview-sec1 div{
+    width: 30rem;
+    height: 35rem;
   }
   
 }

@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import homeBg from "./assets/home1.webp";
@@ -18,16 +20,93 @@ import Contact from "./components/Contact";
 import Sale from "./components/Sale";
 import Fitness from "./components/fitness";
 import Preview from "./components/Preview";
+import OffCanvas from './components/OffCanvas';
 
 
 
 function App() {
+  
+  //OffCanvas State
+  const [isOffCanvasVisible, setOffCanvasVisible] = useState(false);
+
+  const toggleOffCanvas = () => {
+    setOffCanvasVisible(!isOffCanvasVisible);
+    console.log('hey there')
+  };
+
+
+  // State for the selected products array
+  const [selectedProducts, setSelectedProducts] = useState([]);
+
+  // Function to add a product to the cart
+  const addToCart = (product) => {
+    setSelectedProducts([...selectedProducts, product]);
+  };
+
+  // Function to remove a product from the cart
+  const removeFromCart = (productToRemove) => {
+    setSelectedProducts(selectedProducts.filter(product => product.id !== productToRemove.id));
+  };
+
+  //Function to update the products
+  const changeQuantity = (productId, quantity) => {
+    setSelectedProducts(selectedProducts.map(product =>
+      product.id === productId ? { ...product, quantity } : product
+    ));
+  };
+
+  // Function to calculate the total price of the products in the cart
+  const getTotalPrice = () => {
+    return selectedProducts.reduce((total, product) => total + product.price * product.quantity, 0);
+  };
+  
+  // Function to calculate the total number of products in the cart
+  const getTotalProducts = () => {
+    return selectedProducts.reduce((total, product) => total + product.quantity, 0);
+  };
+
+  //Function to clear the cart
+  const clearCart = () => {
+    setSelectedProducts([]);
+  };
+
+  //My checkout for in future when my knowledge broadens
+
+  //const checkout = () => {
+    // Here you might want to create an order summary,
+    // save the order to a database, send a confirmation email, etc.
+
+    // Clear the cart
+    //clearCart();
+ //};
+  
+  //On checkout for now.
+  const checkout = () => {
+    
+    clearCart();
+
+    // Redirect to the payment API
+    //window.location.href = 'https://www.payment-api.com/checkout';
+  };
+
+
   return (
     <Router>
     <div>
+    <Navbar onCartClick={toggleOffCanvas} />
+    <OffCanvas
+      isVisible={isOffCanvasVisible}
+      selectedProducts={selectedProducts}
+      addToCart={addToCart}
+      removeFromCart={removeFromCart}
+      changeQuantity={changeQuantity}
+      getTotalPrice={getTotalPrice}
+      getTotalProducts={getTotalProducts}
+      clearCart={clearCart}
+      onCartClick={toggleOffCanvas}
+    />
       <Switch>
         <Route exact path='/'>
-          <Navbar/>
           <div id="home" style={{
             backgroundImage: `url(${homeBg})`,
             backgroundPosition: 'center',
@@ -235,7 +314,7 @@ function App() {
           <AllProducts />
          </Route>
          <Route exact path='/Preview/:id' >
-          <Preview/>
+          <Preview selectedProducts={selectedProducts} addToCart={addToCart} />
          </Route>
       </Switch>
     </div>

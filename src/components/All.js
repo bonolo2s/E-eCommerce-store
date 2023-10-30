@@ -12,7 +12,7 @@ const AllProducts = () => {
     return (
        
     <div>
-        <Navbar/>
+        
         <Cta/>
         <div style={{backgroundColor:'aliceblue',padding:'3% 8%'}}>
             <div style={{backgroundColor:'white', width:'100%',padding:'3%'}} >
@@ -22,7 +22,7 @@ const AllProducts = () => {
                 <div className="Rendering-products">
                 {products.map((product) => (
                         <div key={product.id} style={{margin: '10px'}}>
-                            <Link style={{color: 'black'}} to={`/Preview/${product.id}`}>
+                            <Link to={`/Preview/${product.id}`}>
                                 <div style={{width:'300px'}}>
                                     <img src={product.image} alt={product.name} style={{width:'300px', height:"300px"}} />
                                     <p style={{fontSize:'20px', color:'grey'}}>{product.category}</p>

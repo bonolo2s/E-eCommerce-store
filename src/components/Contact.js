@@ -17,7 +17,6 @@ const Contact = () => {
 
     return (  
         <div>
-            <Navbar/>
             <div className="page-title">
                 <h1>Contact</h1>
             </div>

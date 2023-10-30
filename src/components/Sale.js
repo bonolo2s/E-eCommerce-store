@@ -7,7 +7,6 @@ const Sale = () => {
     const onSaleProducts = products.filter(product => product.categories.includes('On Sale'));
     return ( 
         <div>
-            <Navbar/>
             <Cta/>
             <div style={{backgroundColor:'aliceblue',padding:'3% 8%'}}>
             <div style={{backgroundColor:'white', width:'100%',padding:'3%'}} >
