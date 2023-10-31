@@ -1,5 +1,6 @@
 // OffCanvas.js
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 import { FiArrowRight } from "react-icons/fi";
 import { MdDelete } from 'react-icons/md';
@@ -58,10 +59,10 @@ function OffCanvas({
                 
                   <input type="number" min={0} style={{width:'100px', height:'30px', padding:'2px', fontSize:'20px'}} 
                     value={product.quantity}
-                    onChange={(e) => changeQuantity(product.id, e.target.value)}
+                    onChange={(e) => changeQuantity(product.id, parseInt(e.target.value))}
                   />
                   <p>Price: ${product.price}</p>
-                  <p>{product.quantity * product.price}</p>
+                  <p>{((product.quantity * product.price * 100) / 100).toFixed(2)}</p>
               </div>
             </div>
           </div>
@@ -78,7 +79,7 @@ function OffCanvas({
         <p style={{fontSize:'1.5rem', fontWeight:'bold',margin:'10px 0'}} >Cart Total: {totalProducts}</p>
 
         <div style={{display:'flex', justifyContent:'space-between'}}>
-          <button style={{padding:'15px 20px'}}>Checkout</button>
+          <Link to='/Checkout' onClick={onCartClick} ><button style={{padding:'15px 20px'}}>Checkout</button></Link>
         </div>
     </div>
   );

@@ -21,6 +21,7 @@ import Sale from "./components/Sale";
 import Fitness from "./components/fitness";
 import Preview from "./components/Preview";
 import OffCanvas from './components/OffCanvas';
+import Checkout from './components/Checkout';
 
 
 
@@ -31,7 +32,6 @@ function App() {
 
   const toggleOffCanvas = () => {
     setOffCanvasVisible(!isOffCanvasVisible);
-    console.log('hey there')
   };
 
 
@@ -40,8 +40,20 @@ function App() {
 
   // Function to add a product to the cart
   const addToCart = (product) => {
-    setSelectedProducts([...selectedProducts, product]);
+    // Check if the product is already in the cart
+    const existingProduct = selectedProducts.find(p => p.id === product.id);
+  
+    if (existingProduct) {
+      // If the product is already in the cart, increment its quantity
+      existingProduct.quantity += 1;
+      // Update the state with the new product list
+      setSelectedProducts([...selectedProducts]);
+    } else {
+      // If the product is not in the cart, add it with a quantity of 1
+      setSelectedProducts([...selectedProducts, { ...product, quantity: 1 }]);
+    }
   };
+  
 
   // Function to remove a product from the cart
   const removeFromCart = (productToRemove) => {
@@ -55,10 +67,10 @@ function App() {
     ));
   };
 
-  // Function to calculate the total price of the products in the cart
-  const getTotalPrice = () => {
-    return selectedProducts.reduce((total, product) => total + product.price * product.quantity, 0);
-  };
+// Function to calculate the total price of the products in the cart
+const getTotalPrice = () => {
+  return (selectedProducts.reduce((total, product) => total + (product.price * product.quantity * 100), 0) / 100).toFixed(2);
+};
   
   // Function to calculate the total number of products in the cart
   const getTotalProducts = () => {
@@ -316,6 +328,10 @@ function App() {
          <Route exact path='/Preview/:id' >
           <Preview selectedProducts={selectedProducts} addToCart={addToCart} />
          </Route>
+         <Route exact path='/Checkout' >
+          <Checkout selectedProducts={selectedProducts} />
+         </Route>
+
       </Switch>
     </div>
   </Router>
