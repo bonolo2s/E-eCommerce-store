@@ -64,7 +64,7 @@ export const products = [
     },
     {
       id: 6,
-      name: 'Nike Air',
+      name: 'Nike Air Max Ladies Running Shoes',
       description: 'Running shoes with superior comfort and style.',
       price: 120.99,
       categories: 'Shoes',

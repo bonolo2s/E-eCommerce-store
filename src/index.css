@@ -121,6 +121,7 @@ body{
 }
 .array-container{
   flex: 2;
+  margin-right: 20px;
 }
 .summary-container{
   flex: 1;
@@ -293,11 +294,29 @@ body{
 .input-section button:hover{
   background-color: blue;
 }
+/*SALE SECTION STYLES*/
+.OnSale-Container{
+  display: flex;
+  justify-content: space-around;
+}
+.sale-1{
+  width: 25vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sale-2{
+  width: 25vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 /*FAQs*/
 .FAQ{
-  margin: 8% 5%;/*
-  background-color: beige;*/
+  margin: 8% 5%;
 }
 .FAQ h2{
   margin: 20px 0;
@@ -530,6 +549,7 @@ body{
   }
   .array-container{
     flex: 1;
+    margin: 0;
   }
   .summary-container{
     flex: 1;
@@ -614,6 +634,24 @@ body{
     width: 100%;
     margin: 10px;
    }
+
+  /*SALE SECTION STYLES*/
+  .OnSale-Container{
+    display: flex;
+    flex-direction: column;
+  }
+  .sale-1{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  .sale-2{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
   /*PRODUCTS DISPLAY STYLE*/
   .Rendering-products{
     grid-template-columns: repeat(1,100%);
@@ -656,7 +694,7 @@ body{
   font-size: 20px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 600px) {
     /*OFF-CANVA STYLES*/
     .offCanva{
       width: 60vw;
@@ -669,6 +707,7 @@ body{
     }
     .array-container{
       flex: 1;
+      margin: 0;
     }
     .summary-container{
       flex: 1;
@@ -680,6 +719,7 @@ body{
       width: 20rem;
       height: 18rem;
     }
+
     /*SHOP-NOW*/
     .shop-now-section{
       flex-direction: row;
@@ -687,6 +727,31 @@ body{
     .display{
       margin: 10px;
     }
+
+    /*SALE SECTION STYLES*/
+    .OnSale-Container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .sale-1{
+      width: 75%;
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      background-attachment: cover;
+      background-repeat: no-repeat;
+    }
+    .sale-2{
+      width: 75%;
+      height: 50vh;
+      margin-top: 50px;
+      text-align: center;
+      background-attachment: cover;
+      background-repeat: no-repeat;
+    }
+
     /*PRODUCTS DISPLAY STYLE*/
     .Rendering-products{
       grid-template-columns: repeat(2,50%);
@@ -698,7 +763,7 @@ body{
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
 
   /*OFF-CANVA STYLES*/
   .offCanva{
@@ -706,36 +771,66 @@ body{
     height: 100%;
   }
 
-
   /*CHECKOUT STYLES*/
   .Checkout-container{
     flex-direction: row;
   }
   .array-container{
     flex: 2;
+    margin-right: 20px;
   }
   .summary-container{
     flex: 1;
   }
-
 
   /*About-us section*/
   .about-section img{
     width: 30rem;
     height: 22rem;
   }
+
   /*SHOP-NOW*/
   .shop-now-section{
     flex-direction: row;
   }
+
+  /*SALE SECTION STYLES*/
+  .OnSale-Container{
+    display: flex;
+    flex-direction: row;
+  }
+  .sale-1{
+    width: 35vw;
+    height: 70vh;/*
+    display: flex;
+    flex-direction: column;
+    align-items: center;*/
+    text-align: center;
+    background-attachment: cover;
+    background-repeat: no-repeat;
+  }
+  .sale-2{
+    width: 35vw;
+    height: 70vh;/*
+    display: flex;
+    flex-direction: column;
+    align-items: center;*/
+    text-align: center;
+    margin-top: 0;
+    background-attachment: cover;
+    background-repeat: no-repeat;
+  }
+
   /*PRODUCTS DISPLAY STYLE*/
   .Rendering-products{
     grid-template-columns: repeat(3,30%);
   }
+
   /*PRODUCTS ON PREVIEW*/
   .preview-sec1 div{
     width: 30rem;
     height: 35rem;
   }
-  
+
+
 }

@@ -43,6 +43,7 @@ const Checkout = ({
                             </div>
                         ))
                     }
+                    <p>Continue shopping link</p>
                 </div>
                 <div className="summary-container">
                     <div className="order-summary">
