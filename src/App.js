@@ -22,6 +22,7 @@ import Fitness from "./components/fitness";
 import Preview from "./components/Preview";
 import OffCanvas from './components/OffCanvas';
 import Checkout from './components/Checkout';
+import Accordion from './components/Accordion';
 
 
 
@@ -334,6 +335,7 @@ function App() {
 
           <Cta/>
           <Footer/>
+          
         </Route>
         <Route exact path='/Sale' >
           <Sale/>
@@ -368,6 +370,7 @@ function App() {
          </Route>
 
       </Switch>
+    <Accordion/>
     </div>
   </Router>
   );

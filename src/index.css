@@ -294,6 +294,41 @@ body{
 .input-section button:hover{
   background-color: blue;
 }
+
+/*ACCORDION STYLES*/
+.Accordion-wrapper{
+  padding: 10px;
+}
+.accordion{
+  background-color: white;
+}
+.item{
+  background-color: aliceblue;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.question{
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.content{
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0,1,0,1);
+}
+.content.show{
+  height: auto;
+  max-height: 999px;
+  transition: all 0.5s cubic-bezier(0,1,0,1);
+}
+
+
 /*SALE SECTION STYLES*/
 .OnSale-Container{
   display: flex;

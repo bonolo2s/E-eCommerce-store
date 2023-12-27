@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const Accordion = () => {
     const data = [
         {
@@ -29,11 +31,38 @@ const Accordion = () => {
             answer :"You can contact our customer support team by email or phone.Our email address is support@yourstore.com, and our phone number is 555-1234.We are available Monday through Friday from 9am to 5pm."
         }
     ]
+
+    const [selected, setSelected] = useState(null)
+
+    const toggle = i => {
+        if(selected === i){
+            return setSelected(null)
+        }
+        
+        setSelected(i)
+    }
+    
     return (
         <div>
-            <p>some content</p>
+            <div className="Accordion-wrapper">
+                <div className="accordion">
+                    {data.map((item, i) =>(
+                        <div className="item" key={i}>
+                            <div className="question" onClick={() => toggle(i)}>
+                                <h3>{item.Question}</h3>
+                                <span style={{fontWeight:'bold'}}>{selected === i ? '-' : '+'}</span>
+                            </div>
+                            <div className={selected === i ? 'content show' : 'content'}>
+                                <p>{item.answer}</p>
+                            </div>
+                        </div>
+                    ))
+                    }
+                </div>
+            </div>
         </div>
       );
-}
- 
-export default Accordion;
+    }
+    
+    export default Accordion;
+    

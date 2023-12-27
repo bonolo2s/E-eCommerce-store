@@ -6,6 +6,7 @@ import Navbar from "./Navbar";
 import { FiSmartphone } from 'react-icons/fi';
 import { MdLocationOn } from 'react-icons/md';
 import { FaInstagram, FaPinterest, FaTwitter, FaFacebook} from 'react-icons/fa';
+import Accordion from './Accordion';
 
 const Contact = () => {
 
@@ -77,101 +78,8 @@ const Contact = () => {
                 </div>
                 <span style={{width:'100%',height:'1px', backgroundColor:"black",display:'inline-block',margin:'20px 0'}}></span>
 
-                <div className="accordion-container">
-                    <div className="contentBx">
-                        <div className="content-title" onClick={() => setIsOpen(!isOpen)}>
-                            <p style={{fontSize:'25px', fontWeight:'600'}} >What is ActiveWearCentral?</p>
-                        </div>
-                        <div className={`content-text ${isOpen ? "open" : ""}`}>
-                            <p style={{color:'grey'}}>
-                                ActiveWearCentral is your one-stop-shop for stylish, high-quality sportswear. 
-                                We offer a curated collection of athletic apparel, shoes, and sports equipment
-                                to inspire an active lifestyle. Our goal is to keep you ahead of the game and 
-                                feeling confident in your gear.
-                            </p>
-                        </div>
-                    </div>
-                    <div className="contentBx">
-                        <div className="content-title" onClick={() => setIsOpen(!isOpen)}>
-                            <p style={{fontSize:'25px', fontWeight:'600'}} >What is ActiveWearCentral?</p>
-                        </div>
-                        <div className={`content-text ${isOpen ? "open" : ""}`}>
-                            <p style={{color:'grey'}}>
-                                ActiveWearCentral is your one-stop-shop for stylish, high-quality sportswear. 
-                                We offer a curated collection of athletic apparel, shoes, and sports equipment
-                                to inspire an active lifestyle. Our goal is to keep you ahead of the game and 
-                                feeling confident in your gear.
-                            </p>
-                        </div>
-                    </div>
-                    <div className="contentBx">
-                        <div className="content-title">
-                            <p style={{fontSize:'25px', fontWeight:'600'}} >What is ActiveWearCentral?</p>
-                        </div>
-                        <div className="content-text">
-                            <p style={{color:'grey'}}>
-                                ActiveWearCentral is your one-stop-shop for stylish, high-quality sportswear. 
-                                We offer a curated collection of athletic apparel, shoes, and sports equipment
-                                to inspire an active lifestyle. Our goal is to keep you ahead of the game and 
-                                feeling confident in your gear.
-                            </p>
-                        </div>
-                    </div>
-                    <div className="contentBx">
-                        <div className="content-title">
-                            <p style={{fontSize:'25px', fontWeight:'600'}} >What is ActiveWearCentral?</p>
-                        </div>
-                        <div className="content-text">
-                            <p style={{color:'grey'}}>
-                                ActiveWearCentral is your one-stop-shop for stylish, high-quality sportswear. 
-                                We offer a curated collection of athletic apparel, shoes, and sports equipment
-                                to inspire an active lifestyle. Our goal is to keep you ahead of the game and 
-                                feeling confident in your gear.
-                            </p>
-                        </div>
-                    </div>
-                    <div className="contentBx">
-                        <div className="content-title">
-                            <p style={{fontSize:'25px', fontWeight:'600'}} >What is ActiveWearCentral?</p>
-                        </div>
-                        <div className="content-text">
-                            <p style={{color:'grey'}}>
-                                ActiveWearCentral is your one-stop-shop for stylish, high-quality sportswear. 
-                                We offer a curated collection of athletic apparel, shoes, and sports equipment
-                                to inspire an active lifestyle. Our goal is to keep you ahead of the game and 
-                                feeling confident in your gear.
-                            </p>
-                        </div>
-                    </div>
-                    <div className="contentBx">
-                        <div className="content-title">
-                            <p style={{fontSize:'25px', fontWeight:'600'}} >What is ActiveWearCentral?</p>
-                        </div>
-                        <div className="content-text">
-                            <p style={{color:'grey'}}>
-                                ActiveWearCentral is your one-stop-shop for stylish, high-quality sportswear. 
-                                We offer a curated collection of athletic apparel, shoes, and sports equipment
-                                to inspire an active lifestyle. Our goal is to keep you ahead of the game and 
-                                feeling confident in your gear.
-                            </p>
-                        </div>
-                    </div>
-                    <div className="contentBx">
-                        <div className="content-title">
-                            <p style={{fontSize:'25px', fontWeight:'600'}} >What is ActiveWearCentral?</p>
-                        </div>
-                        <div className="content-text">
-                            <p style={{color:'grey'}}>
-                                ActiveWearCentral is your one-stop-shop for stylish, high-quality sportswear. 
-                                We offer a curated collection of athletic apparel, shoes, and sports equipment
-                                to inspire an active lifestyle. Our goal is to keep you ahead of the game and 
-                                feeling confident in your gear.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <Accordion/>
                 
-
             </div>
             <Cta/>
             <Footer/>
