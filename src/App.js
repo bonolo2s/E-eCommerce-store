@@ -54,6 +54,16 @@ function App() {
     }
   };
   
+  //Function to calculate the total price of an item
+  const calculateTotalPrice = (product) => {
+    if (!product) {
+      return 0; // Return 0 if the product is not found
+    }
+    
+    // Calculate and return the total price
+    return product.quantity * product.price;
+  };
+
 
   // Function to remove a product from the cart
   const removeFromCart = (productToRemove) => {
@@ -67,11 +77,27 @@ function App() {
     ));
   };
 
-// Function to calculate the total price of the products in the cart
-const getTotalPrice = () => {
-  return (selectedProducts.reduce((total, product) => total + (product.price * product.quantity * 100), 0) / 100).toFixed(2);
-};
-  
+  // Function to calculate the total price of the products in the cart
+  const getTotalPrice = () => {
+    return (selectedProducts.reduce((total, product) => total + (product.price * product.quantity * 100), 0) / 100).toFixed(2);
+  };
+
+  // Function to calculate the total VAT of the products in the cart
+  const getTotalVAT = () => {
+    const totalPrice = getTotalPrice();
+    const vatRate = 0.14; // 14% VAT
+    return (totalPrice * vatRate).toFixed(2);
+  };
+
+  // Function to calculate the grand total of the products in the cart
+  const getGrandTotal = () => {
+    const totalPrice = parseFloat(getTotalPrice());
+    const totalVAT = parseFloat(getTotalVAT());
+
+    // Calculate and return the grand total
+    return (totalPrice + totalVAT).toFixed(2);
+  };
+
   // Function to calculate the total number of products in the cart
   const getTotalProducts = () => {
     return selectedProducts.reduce((total, product) => total + product.quantity, 0);
@@ -116,6 +142,7 @@ const getTotalPrice = () => {
       getTotalProducts={getTotalProducts}
       clearCart={clearCart}
       onCartClick={toggleOffCanvas}
+      calculateTotalPrice = {calculateTotalPrice}
     />
       <Switch>
         <Route exact path='/'>
@@ -329,7 +356,14 @@ const getTotalPrice = () => {
           <Preview selectedProducts={selectedProducts} addToCart={addToCart} />
          </Route>
          <Route exact path='/Checkout' >
-          <Checkout selectedProducts={selectedProducts} />
+          <Checkout 
+            selectedProducts={selectedProducts}
+            getTotalPrice={getTotalPrice}
+            calculateTotalPrice = {calculateTotalPrice}
+            getTotalProducts={getTotalProducts}
+            getTotalVAT = {getTotalVAT}
+            getGrandTotal = {getGrandTotal}
+          />
          </Route>
 
       </Switch>

@@ -15,22 +15,11 @@ function OffCanvas({
     getTotalPrice,
     getTotalProducts,
     clearCart,
-    onCartClick
+    onCartClick,
+    calculateTotalPrice
   }) {
 
-    //Function to calculate the total price of an item
-    const calculateTotalPrice = (productId) => {
-      // Find the product in the selectedProducts array
-      const product = selectedProducts.find(product => product.id === productId);
-    
-      if (!product) {
-        return 0; // Return 0 if the product is not found
-      }
-    
-      // Calculate and return the total price
-      return product.quantity * product.price;
-    };
-
+    const ItemTotalPrice = calculateTotalPrice();
     const totalPrice = getTotalPrice();
     const totalProducts = getTotalProducts();
 
@@ -62,7 +51,7 @@ function OffCanvas({
                     onChange={(e) => changeQuantity(product.id, parseInt(e.target.value))}
                   />
                   <p>Price: ${product.price}</p>
-                  <p>{((product.quantity * product.price * 100) / 100).toFixed(2)}</p>
+                  <p>Total: ${calculateTotalPrice(product).toFixed(2)}</p>
               </div>
             </div>
           </div>

@@ -33,7 +33,7 @@ const Preview = ({ selectedProducts, addToCart }) => {
                         <p style={{fontSize:'40px', color:'grey'}} >Price: ${product.price}</p>
                         <p style={{fontSize:'20px', color:'grey'}} >Description: {product.description}</p>
                         <div>
-                            <input type="number" id='quantity' name="quantity" min="1" max="5" style={{width:'100px', height:'40px'}} />
+                            
                             <button className='add-to-cart-btn' onClick={() => addToCart(product)} >Add to cart</button>
                         </div>
                         <span style={{width:'100%',height:'1px', backgroundColor:"black",display:'inline-block',margin:'20px 0'}}></span>

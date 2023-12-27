@@ -47,8 +47,8 @@ export const products = [
     // Shoes categories
     {
       id: 4,
-      name: 'Nike Revolution Mens Running Shoes',
-      description: 'Comfortable and stylish running shoes for everyday wear.',
+      name: 'Nike Revolution ',
+      description: 'Mens Running Shoes, comfortable and stylish running shoes for everyday wear.',
       price: 90.99,
       categories: 'Shoes',
       image: nike
@@ -64,7 +64,7 @@ export const products = [
     },
     {
       id: 6,
-      name: 'Nike Air Max Ladies Running Shoes',
+      name: 'Nike Air',
       description: 'Running shoes with superior comfort and style.',
       price: 120.99,
       categories: 'Shoes',
