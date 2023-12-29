@@ -60,7 +60,7 @@ const Checkout = ({
                             <p style={{color:'green', fontSize:'20px',fontWeight:'bold'}}>{grandTotal}</p>
                         </div>
                         <br />
-                        <Link ><button><MdVerified /> Proceed to Secure Checkout</button></Link>
+                        <Link to='/LoginPage'><button><MdVerified /> Proceed to Secure Checkout</button></Link>
                     </div>
                     <div className="coupon-container">
                         <input type="text" placeholder='Apply a discount code' />

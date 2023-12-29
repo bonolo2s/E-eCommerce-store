@@ -23,6 +23,8 @@ import Preview from "./components/Preview";
 import OffCanvas from './components/OffCanvas';
 import Checkout from './components/Checkout';
 import Accordion from './components/Accordion';
+import LoginPage from './components/LoginPage';
+import ShippingDetails from './components/Shipping';
 
 
 
@@ -335,7 +337,8 @@ function App() {
 
           <Cta/>
           <Footer/>
-          
+          <Accordion/>
+
         </Route>
         <Route exact path='/Sale' >
           <Sale/>
@@ -368,9 +371,19 @@ function App() {
             getGrandTotal = {getGrandTotal}
           />
          </Route>
+         <Route exact path='/LoginPage' >
+          <LoginPage/>
+         </Route>
+         <Route exact path ='/Shipping' >
+          <ShippingDetails
+            getTotalPrice={getTotalPrice}
+            getTotalProducts={getTotalProducts}
+            getTotalVAT = {getTotalVAT}
+            getGrandTotal = {getGrandTotal}
+          />
+         </Route>
 
       </Switch>
-    <Accordion/>
     </div>
   </Router>
   );

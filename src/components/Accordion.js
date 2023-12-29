@@ -46,14 +46,14 @@ const Accordion = () => {
         <div>
             <div className="Accordion-wrapper">
                 <div className="accordion">
-                    {data.map((item, i) =>(
-                        <div className="item" key={i}>
+                    {data.map((Item, i) =>(
+                        <div className="Item" key={i}>
                             <div className="question" onClick={() => toggle(i)}>
-                                <h3>{item.Question}</h3>
+                                <h3>{Item.Question}</h3>
                                 <span style={{fontWeight:'bold'}}>{selected === i ? '-' : '+'}</span>
                             </div>
                             <div className={selected === i ? 'content show' : 'content'}>
-                                <p>{item.answer}</p>
+                                <p>{Item.answer}</p>
                             </div>
                         </div>
                     ))
