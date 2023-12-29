@@ -121,7 +121,7 @@ const ShippingDetails = ({
                                 <p style={{color:'green', fontSize:'20px',fontWeight:'bold'}}>{grandTotal}</p>
                             </div>
                             <br />
-                            <Link to='/LoginPage'><button><MdVerified /> Continue to secure payment</button></Link>
+                            <Link to='/Billing'><button><MdVerified /> Continue to secure payment</button></Link>
                         </div>
                         <div className="coupon-container">
                             <input type="text" placeholder='Apply a discount code' />

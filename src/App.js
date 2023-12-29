@@ -25,6 +25,7 @@ import Checkout from './components/Checkout';
 import Accordion from './components/Accordion';
 import LoginPage from './components/LoginPage';
 import ShippingDetails from './components/Shipping';
+import Billing from './components/Billing';
 
 
 
@@ -382,6 +383,9 @@ function App() {
             getGrandTotal = {getGrandTotal}
           />
          </Route>
+         <Router exact path = '/Billing'>
+          <Billing/>
+         </Router>
 
       </Switch>
     </div>
