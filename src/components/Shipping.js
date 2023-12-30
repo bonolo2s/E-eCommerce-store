@@ -51,7 +51,7 @@ const ShippingDetails = ({
                 <div className="shipping-container-1" >
                     <p style={{fontSize:'3rem'}}>Could you please share your preferred method for receiving your order?</p>
                     <div className="delivery-method">
-                        <button style={{padding:'30px 40px', borderRadius:'50px', border:'1px solid black', margin:'5px'}}><FaShippingFast /> Delivery to my adress</button>
+                        <button style={{padding:'30px 40px', borderRadius:'50px', border:'2px solid black', margin:'5px'}}><FaShippingFast /> Delivery to my adress</button>
                         <button style={{padding:'30px 40px', borderRadius:'50px', border:'1px solid black', margin:'5px'}}>Self collect at Pick Up point</button>
                     </div>
                     <p style={{backgroundColor:'aliceblue',padding:'10px', margin:'10px 0', borderRadius:'10px', width:'95%'}}><FaExclamationTriangle style={{marginRight:'10px'}} /><span>Kindly note that we are unable to deliver orders to a P.O. Box or an incomplete address</span></p>

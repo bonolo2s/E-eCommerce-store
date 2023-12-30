@@ -114,6 +114,10 @@ body{
 .item:hover{
   box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
 }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
 /*CHECKOUT STYLES*/
 .Checkout-container{
@@ -211,6 +215,12 @@ body{
   padding: 20px 5px;
   margin: 60px 10%;
   box-shadow: 1px 1px 5px 1px grey;
+}
+.Payment-container{
+  background-color: aliceblue;
+  padding: 20px;
+  width: 50%;
+  margin: 20px 0;
 }
 
 /*HOME SECTION*/
@@ -437,6 +447,7 @@ body{
   margin: 15px;
 }
 
+
 /*CTA*/
 .CTA{
   background-position: center;
@@ -617,6 +628,7 @@ body{
     display: flex;
     flex-direction: column;
     text-align: center;
+    transition: all 0.5s ease;
   }
   .Hidden-navbar-links ul li{
     margin: 1rem auto;
@@ -664,6 +676,21 @@ body{
     display: flex;
     flex-direction: column;
   }
+
+  /*BILLING STYLES*/
+  .Billing-container{
+    padding: 20px 5px;
+    margin: 60px 10px;
+    box-shadow: 1px 1px 5px 1px grey;
+  }
+  .Payment-container{
+    background-color: aliceblue;
+    padding: 20px;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+
   /*HOME SECTION*/
   #home h1{
     color: rgb(112, 161, 189);
@@ -753,6 +780,7 @@ body{
     margin: 10px 0;
   }
 
+
   /*CTA*/
   .CTA{
     height: 120vh;
@@ -798,6 +826,7 @@ body{
   .Rendering-products{
     grid-template-columns: repeat(1,100%);
   }
+
   /*PRODUCTS ON PREVIEW*/
   .preview{
     flex-direction: column;
@@ -813,8 +842,6 @@ body{
   .preview-sec2{
     margin: 0;
   }
-
-
 
   /*FOOTER*/
   .footer-row{

@@ -338,7 +338,6 @@ function App() {
 
           <Cta/>
           <Footer/>
-          <Accordion/>
 
         </Route>
         <Route exact path='/Sale' >
@@ -384,7 +383,9 @@ function App() {
           />
          </Route>
          <Router exact path = '/Billing'>
-          <Billing/>
+          <Billing
+            getGrandTotal = {getGrandTotal}
+          />
          </Router>
 
       </Switch>
