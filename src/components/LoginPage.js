@@ -32,6 +32,7 @@ const LoginPage = () => {
                 <div className="login-container-2">
                     <p style={{fontWeight:'bold', fontSize:'18px'}}>Existing Customer</p>
                     <p>sign in below</p>
+                  
                     <form onSubmit={handleSubmit}>
                         <label htmlFor="username" style={{display:'block'}}>UserName :
                             <input type="text" required placeholder="Insert UserName" value={username} onChange={e => setUsername(e.target.value)} style={{padding:'10px'}} />
@@ -44,6 +45,8 @@ const LoginPage = () => {
                 </div>
 
             </div>
+
+            <p>please fill in "demo" for all fields</p>
 
         </div>
      );

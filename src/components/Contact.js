@@ -56,15 +56,15 @@ const Contact = () => {
                         <div className="input-section">
                             <div>
                                 <label style={{fontSize:'20px',color:'grey'}} htmlFor="name">Name</label >
-                                <input style={{display:'block',width:'100%',height:'40px'}} type="text" name="name" id="" />
+                                <input style={{display:'block',width:'100%',height:'40px',padding:'2px',fontSize:'15px'}} type="text" name="name" id="" />
                             </div>
                             <div>
                                 <label style={{fontSize:'20px',color:'grey'}} htmlFor="">Email</label>
-                                <input style={{display:'block',width:'100%' ,height:'40px'}}  type="text" name="" id="" />
+                                <input style={{display:'block',width:'100%' ,height:'40px',padding:'2px',fontSize:'15px'}}  type="text" name="" id="" />
                             </div>
                             <div>
                                 <label style={{fontSize:'20px',color:'grey'}} htmlFor="">Comment or Message</label>
-                                <textarea style={{display:'block',width:'100%'}}  name="" id="" cols="30" rows="10"></textarea>
+                                <textarea style={{display:'block',width:'100%',padding:'2px',fontSize:'15px'}}  name="" id="" cols="30" rows="10"></textarea>
                             </div>
                             <button >Send Message</button>
                         </div>

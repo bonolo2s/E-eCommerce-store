@@ -115,8 +115,8 @@ function App() {
   //My checkout for in future when my knowledge broadens
 
   //const checkout = () => {
-    // Here you might want to create an order summary,
-    // save the order to a database, send a confirmation email, etc.
+    // Here i might want to create an order summary,
+    // ill save the order to a database, send a confirmation email, etc.
 
     // Clear the cart
     //clearCart();
@@ -165,8 +165,8 @@ function App() {
                 <h1>the Game</h1>
                 <h1>changers</h1>
                 <p></p>
-                <button className="home-section-btn">Shoes</button>
-                <button className="home-section-btn">Fitness apparel</button>
+                <Link to = '/Shoes' ><button className="home-section-btn">Shoes</button></Link>
+                <Link to = '/fitness'><button className="home-section-btn">Fitness apparel</button></Link>
               </div>
           </div>
           

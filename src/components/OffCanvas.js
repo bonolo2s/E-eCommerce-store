@@ -25,7 +25,7 @@ function OffCanvas({
 
   return (
     <div class="offCanva" style={{ display: isVisible ? 'block' : 'none',
-      animation: isVisible ? 'fadeIn 1s' : 'none'
+        animation: isVisible ? 'fadeIn 1s' : 'none'
      }}>
 
         <div style={{display:'flex', justifyContent:'space-between'}}>

@@ -223,6 +223,17 @@ body{
   margin: 20px 0;
 }
 
+/*SELF COLLECTION STYLES*/
+.SelfCollection-Container{
+  width: 90%;
+}
+.SelfCollection-Container .personalDetails{
+  display: flex;
+}
+.SelfCollection-Container .ContactDetials{
+  display: flex;
+}
+
 /*HOME SECTION*/
 .home-section-btn{
   padding: 20px 30px;
@@ -446,6 +457,8 @@ body{
   line-height: 4;
   margin: 15px;
 }
+
+
 
 
 /*CTA*/
@@ -690,6 +703,15 @@ body{
     margin: 20px 0;
   }
 
+  /*SELF COLLECTION STYLES*/
+  .SelfCollection-Container .personalDetails{
+    display: flex;
+    flex-direction: column;
+  }
+  .SelfCollection-Container .ContactDetials{
+    display: flex;
+    flex-direction: column;
+  }
 
   /*HOME SECTION*/
   #home h1{
