@@ -2,8 +2,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-import { CSSTransition } from 'react-transition-group';
-import '../styles/slideTransition.css'
 
 import { FiArrowRight } from "react-icons/fi";
 import { MdDelete } from 'react-icons/md';
@@ -27,13 +25,8 @@ function OffCanvas({
     const totalProducts = getTotalProducts();
 
   return (
-    <CSSTransition
-      in={isVisible}
-      timeout={2000}
-      classNames="fade"
-    >
-      <div class="offCanva" style={{ display: isVisible ? "block" : "none"}}>
-
+    <div className={`offCanva ${isVisible ? "cart show" : "cart"}`}>
+ 
           <div style={{display:'flex', justifyContent:'space-between'}}>
             <p style={{fontSize:'2rem'}}>SHOPPING CART</p>
             <FiArrowRight style={{fontSize:'20px', fontWeight:'bold'}} onClick={onCartClick} />
@@ -79,7 +72,6 @@ function OffCanvas({
             <Link to='/Checkout' onClick={onCartClick} ><button style={{padding:'15px 20px'}}>Checkout</button></Link>
           </div>
       </div>
-    </CSSTransition>
   );
 }
 

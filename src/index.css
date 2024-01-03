@@ -90,7 +90,7 @@ body{
   display: none;
   font-size: 30px;
 }
-.Hidden-navbar-links ul{/*
+.Hidden-navbar-links ul{/*this were original ref style*//*
   display: none;*/
   display: flex;
   flex-direction: column;
@@ -109,6 +109,15 @@ body{
   right: 0;
   width: 40vw;
   height: 100%;
+
+}
+.cart{
+  transform: translateX(100%);
+  transition: transform 0.5s ease-out;
+}
+.cart.show{
+  transform: translateX(0%);
+  transition: transform 0.5s ease-out;
 }
 .item{
   display: flex;

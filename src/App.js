@@ -133,21 +133,22 @@ function App() {
 
 
   return (
-    <Router>
-    <div>
-    <Navbar onCartClick={toggleOffCanvas} />
-    <OffCanvas
-      isVisible={isOffCanvasVisible}
-      selectedProducts={selectedProducts}
-      addToCart={addToCart}
-      removeFromCart={removeFromCart}
-      changeQuantity={changeQuantity}
-      getTotalPrice={getTotalPrice}
-      getTotalProducts={getTotalProducts}
-      clearCart={clearCart}
-      onCartClick={toggleOffCanvas}
-      calculateTotalPrice = {calculateTotalPrice}
-    />
+  <Router>
+    <div >
+      <Navbar onCartClick={toggleOffCanvas} />
+      <OffCanvas
+        isVisible={isOffCanvasVisible}
+        selectedProducts={selectedProducts}
+        addToCart={addToCart}
+        removeFromCart={removeFromCart}
+        changeQuantity={changeQuantity}
+        getTotalPrice={getTotalPrice}
+        getTotalProducts={getTotalProducts}
+        clearCart={clearCart}
+        onCartClick={toggleOffCanvas}
+        calculateTotalPrice = {calculateTotalPrice}
+      />
+
       <Switch>
         <Route exact path='/'>
           <div id="home" style={{
