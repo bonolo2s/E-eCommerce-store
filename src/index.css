@@ -90,13 +90,18 @@ body{
   display: none;
   font-size: 30px;
 }
-.Hidden-navbar-links ul{
-  display: none;
+.Hidden-navbar-links ul{/*
+  display: none;*/
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
 }
 
 /*OFF-CANVA STYLES*/
 .offCanva{
-  display: none;
   background-color: rgb(181, 201, 219);
   padding: 2% 5%;
   position: fixed;
@@ -113,10 +118,10 @@ body{
 }
 .item:hover{
   box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
-}
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+}/*
+@keyframes fadeout {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 
 /*CHECKOUT STYLES*/
@@ -375,12 +380,12 @@ body{
 .content{
   max-height: 0;
   overflow: hidden;
-  transition: all 0.5s cubic-bezier(0,1,0,1);
+  transition: all 1s cubic-bezier(0,1,0,1);
 }
 .content.show{
   height: auto;
   max-height: 999px;
-  transition: all 0.5s cubic-bezier(0,1,0,1);
+  transition:  2s all ease;
 }
 
 
@@ -637,11 +642,15 @@ body{
   .menu-collapse-icon{
     display: block;
   }
-  .Hidden-navbar-links ul.open{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    transition: all 0.5s ease;
+  .open{
+    max-height: 0;
+    overflow: hidden;
+    transition: all 1s ease;
+  }
+  .open.show{
+    height: auto;
+    max-height: 999px;
+    transition: 1s all ease;
   }
   .Hidden-navbar-links ul li{
     margin: 1rem auto;
@@ -654,11 +663,12 @@ body{
     color: grey ;
   }
   .hidden-dropdown-child{
+    display: none;/*
     display: flex;
     flex-direction: column;
-    background-color: azure;
+    background-color: rgb(11, 255, 255);
     border-radius: 5px;
-    padding: 10px;
+    padding: 10px;*/
   }
 
   /*OFF-CANVA STYLES*/

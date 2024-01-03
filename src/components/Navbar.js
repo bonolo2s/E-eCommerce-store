@@ -38,7 +38,7 @@ const Navbar = ({onCartClick }) => {
             </div>
             <div className='Hidden-navbar-links' style={{width:'100%'}}>
                 <br />
-                <ul className={menuOpen ? "open" : ""} >
+                <ul className={menuOpen ? "open show" : "open"} >
                     <li><Link to='/Sale'>Sale</Link></li>
                     <li><Link to='/All' className='hidden-dropdown'>Shop</Link>
                         <ul className='hidden-dropdown-child' >

@@ -49,15 +49,15 @@ const Checkout = ({
                     <div className="order-summary">
                         <h2>Order Summary</h2>
                         <br />
-                        <p>Subtotal :{totalPrice}</p>
+                        <p>Subtotal :$ {totalPrice}</p>
                         <br />
-                        <p>VAT(Included) :{totalVat}</p>
+                        <p>VAT(Included) :$ {totalVat}</p>
                         <br />
                         <span style={{width:'100%', height:'1px', display:'inline-block', backgroundColor:"grey"}} ></span>
                         <br />
                         <div style={{display:'flex', justifyContent:"space-between"}}>
                             <p style={{fontSize:'1.2rem',fontWeight:'bold'}} >Grand Total :{totalProducts} item(s)</p>
-                            <p style={{color:'green', fontSize:'20px',fontWeight:'bold'}}>{grandTotal}</p>
+                            <p style={{color:'green', fontSize:'20px',fontWeight:'bold'}}>$ {grandTotal}</p>
                         </div>
                         <br />
                         <Link to='/LoginPage'><button><MdVerified /> Proceed to Secure Checkout</button></Link>
