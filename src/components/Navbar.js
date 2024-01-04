@@ -6,9 +6,13 @@ import { IoIosCart } from 'react-icons/io';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
 
-const Navbar = ({onCartClick }) => {
+const Navbar = ({
+    onCartClick,
+    getTotalProducts
+}) => {
 
     const [menuOpen, setMenuOpen] = useState(false); 
+    const totalProducts = getTotalProducts();
 
     return ( 
         <div className="navbar"> 
@@ -31,7 +35,10 @@ const Navbar = ({onCartClick }) => {
                         </li>
                         <li><Link to='/Contact'>Contact</Link></li>
                     </ul>
-                    <IoIosCart style={{fontSize:'25px'}} onClick={onCartClick} />
+                    <div style={{position:'relative'}}>
+                        <IoIosCart style={{fontSize:'25px'}} onClick={onCartClick} />
+                        <span style={{backgroundColor:"green",borderRadius:'50px',padding:'5px',position:'absolute', top:'15px',left:'15px'}} >{totalProducts}</span>
+                    </div>
                     <GiHamburgerMenu className='menu-collapse-icon'  onClick={() =>
                     setMenuOpen(!menuOpen)} />
                 </div>

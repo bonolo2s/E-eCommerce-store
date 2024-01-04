@@ -135,7 +135,10 @@ function App() {
   return (
   <Router>
     <div >
-      <Navbar onCartClick={toggleOffCanvas} />
+      <Navbar 
+        onCartClick={toggleOffCanvas}
+        getTotalProducts={getTotalProducts}
+      />
       <OffCanvas
         isVisible={isOffCanvasVisible}
         selectedProducts={selectedProducts}
@@ -363,7 +366,7 @@ function App() {
           <Preview selectedProducts={selectedProducts} addToCart={addToCart} />
          </Route>
          <Route exact path='/Checkout' >
-          <Checkout 
+          <Checkout
             selectedProducts={selectedProducts}
             getTotalPrice={getTotalPrice}
             calculateTotalPrice = {calculateTotalPrice}

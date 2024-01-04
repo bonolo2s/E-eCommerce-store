@@ -8,7 +8,7 @@ const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 const CheckoutForm = () => {
   const stripe = useStripe();
   const elements = useElements();
-  const history = useHistory();
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -52,11 +52,11 @@ const CheckoutForm = () => {
 const Billing = ({getGrandTotal}) => {
 
     const grandTotal = getGrandTotal();
-    const history = useHistory();
+    //const history = useHistory();
 
-    const handleCancel = () => {
-      history.push('/Checkout');
-    };
+    //const handleCancel = () => {
+    //  history.push('/Checkout');
+    //};
 
 
   return (
