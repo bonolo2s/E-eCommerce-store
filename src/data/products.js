@@ -3,17 +3,18 @@
 //from a module so that they can be used by other programmes with keyword import.
 
 import boxingGloves from '../assets/resized/boxing gloves.webp'
-import barBell from '../assets/resized/barbell.jpg'
-import tennisRacket from '../assets/resized/tennis-racket.jpg'
-import nike from '../assets/resized/running nike shoes.jpg'
+import barBell from '../assets/resized/barbell.webp'
+import tennisRacket from '../assets/resized/tennis-racket.webp'
+import nike from '../assets/resized/running nike shoes.webp'
 import retroJordan from '../assets/resized/retro jordans.webp'
-import airMax from '../assets/resized/nike 2.jpg'
-import underAm from '../assets/resized/under ummer running shoes.jpg'
-import yogaPants from '../assets/resized/ladies Yoga Pants.jpg'
-import sportBra from '../assets/resized/Ladies sport bra.jpg'
+import airMax from '../assets/resized/nike 2.webp'
+import underAm from '../assets/resized/under ummer running shoes.webp'
+import yogaPants from '../assets/resized/ladies Yoga Pants.webp'
+import sportBra from '../assets/resized/Ladies sport bra.webp'
 import shorts from '../assets/resized/mens-running shorts.webp'
 import vest from '../assets/resized/mens gym vest.webp'
-import tracksuit from '../assets/resized/mens track-suits.jpeg'
+import tracksuit from '../assets/resized/mens track-suits.webp'
+import tracksuit from '../assets/resized/mens track-suits.webp'
 
 
 
